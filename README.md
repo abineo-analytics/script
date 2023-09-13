@@ -1,6 +1,6 @@
 # Abineo Analytics Script
 
-Visit [abineo.swiss/analytics](https://abineo.swiss/analytics) for more information.
+Visit [abineo.swiss/analytics](https://abineo.swiss/analytics) for infos about Abineo Analytics.
 
 ## Example
 
@@ -18,12 +18,6 @@ Build the script using [esbuild](https://esbuild.github.io/).
 
 ```sh
 pnpm run build
-# or
-pnpm run dev
-# or
-npm run build
-# or
-npm run dev
 ```
 
 ## License
