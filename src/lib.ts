@@ -22,9 +22,7 @@ export function Visitor(navigator: Navigator, screen: Screen): Visitor {
 
 export function Page(location: Location, document: Document, ref?: string): Page {
 	return {
-		host: location.host,
-		path: document.querySelector<HTMLLinkElement>('link[rel=canonical]')?.href || location.pathname,
-		search: location.search,
+		url: document.querySelector<HTMLLinkElement>('link[rel=canonical]')?.href || location.href,
 		ref,
 	};
 }
@@ -50,10 +48,7 @@ export type Screen = {
 };
 
 export type Location = {
-	protocol: string;
-	host: string;
-	pathname: string;
-	search: string;
+	href: string;
 };
 
 export type Visitor = {
@@ -63,8 +58,6 @@ export type Visitor = {
 };
 
 export type Page = {
-	host: string;
-	path: string;
-	search?: string;
+	url?: string;
 	ref?: string;
 };
