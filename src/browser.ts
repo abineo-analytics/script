@@ -88,7 +88,7 @@ history.pushState = function () {
 	trackPageExit();
 	// @ts-ignore
 	pushState.apply(this, arguments);
-	page = Page(loc, doc, loc.href);
+	page = Page(loc, doc);
 	onPageEnter();
 };
 
