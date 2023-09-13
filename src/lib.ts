@@ -8,8 +8,8 @@ export function getScrollDistance(element: Element, innerHeight: number) {
 
 export function Visitor(navigator: Navigator, screen: Screen): Visitor {
 	return {
-		timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
-		language: navigator.language,
+		tz: Intl.DateTimeFormat().resolvedOptions().timeZone,
+		lang: navigator.language,
 		screen: [screen.width, screen.height],
 	};
 }
@@ -51,8 +51,8 @@ export type Location = {
 };
 
 export type Visitor = {
-	timezone: string;
-	language: string;
+	tz: string;
+	lang: string;
 	screen: [number, number];
 };
 
