@@ -1,15 +1,10 @@
 {
 	"name": "@abineo/analytics",
 	"version": "0.19.0",
+	"license": "SEE LICENSE IN LICENSE",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/abineo/analytics.git",
-		"directory": "script"
-	},
-	"author": "Christoph Schneider",
-	"license": "SEE LICENSE IN LICENSE",
-	"bugs": {
-		"url": "https://github.com/abineo/analytics/issues"
+		"url": "git+https://github.com/abineo-analytics/script.git"
 	},
 	"homepage": "https://abineo.swiss/analytics",
 	"scripts": {
