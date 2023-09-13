@@ -1,4 +1,4 @@
-import { Page, Visitor, config, getScrollDistance } from './lib';
+import { config, getScrollDistance, Page, random, Visitor } from './lib';
 
 let doc = document;
 let html = doc.documentElement;
@@ -23,8 +23,8 @@ let session = sessionStorage.getItem(sessionKey);
 if (!project) throw 'missing project id';
 
 if (!session) {
-	session = crypto.randomUUID();
-	sessionStorage.setItem(sessionKey, session);
+	session = random();
+	sessionStorage.setItem(sessionKey, session + '');
 }
 
 function post(endpoint: string, data: object) {
@@ -88,7 +88,7 @@ history.pushState = function () {
 
 	// @ts-ignore
 	pushState.apply(this, arguments);
-	
+
 	page = Page(loc, doc);
 	onPageEnter();
 };
