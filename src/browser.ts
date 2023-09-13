@@ -15,10 +15,9 @@ let startTime: number;
 let endTime: number;
 let offDur: number;
 let scrollDistance: number;
-let referrer = doc.referrer;
 
 let visitor = Visitor(navigator, screen);
-let page = Page(loc, doc, referrer);
+let page = Page(loc, doc, doc.referrer);
 let session = sessionStorage.getItem(sessionKey);
 
 if (!project) throw 'missing project id';
@@ -86,8 +85,10 @@ addEventListener('popstate', function () {
 history.pushState = function () {
 	onPageExit();
 	trackPageExit();
+
 	// @ts-ignore
 	pushState.apply(this, arguments);
+	
 	page = Page(loc, doc);
 	onPageEnter();
 };
